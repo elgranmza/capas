@@ -1,0 +1,23 @@
+<div>
+    {{!-- <div>
+        <p>Carritos:</p>
+    </div> --}}
+    <div>
+
+        <ul style="list-style-type: none">
+            {{!-- {{#each carts}} --}}
+            
+            <li>Carrito id: {{cart._id}}</li>
+                {{#each cart.products}}
+                <hr>
+                <li>Producto: {{product.title}}</li>
+                <li>Cantidad {{quantity}}</li>
+                {{/each}}
+            
+            {{!-- {{/each}} --}}
+        </ul>
+
+        <a href="/api/carts/{{cart._id}}/purchase"><button>Finalizar compra</button></a>
+
+    </div>
+</div>
